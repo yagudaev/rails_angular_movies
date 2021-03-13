@@ -1,6 +1,7 @@
 class RailsAngularMoviesSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
+  default_max_page_size 100
 
   # Union and Interface Resolution
   def self.resolve_type(abstract_type, obj, ctx)
